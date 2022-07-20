@@ -5,26 +5,28 @@ body{
     
 }
 main{
-    display: flex;
+     display: flex; 
     flex-direction: column;
 }
 
 /* header section */
 .top-banner{
-    margin-bottom: 40px;
+ margin-bottom: 40px; 
     padding: 20px;
-    display: flex;
+    display: flex;  
     color: white;
     background-color: rgba(0, 0, 0, 0.967);
     border-radius: 10px;
 }
 
-.half-width{
-    width: 50%;
-}
-.half-width img{
-    width: 100%;
-}
+ .half-width{
+      width: 50%; 
+     
+ }
+ .half-width img{
+    width: 100%; 
+    margin-top: 10px;
+ }  
 .link-button{
     color: white;
     font-size:20px;
@@ -67,12 +69,19 @@ main{
    
  }
 
-li{
-    display:flex;
-    flex-direction: column;
+li a{
+   display: block;
 }
- ul>li>a:hover{
-    background-color: darkred;
+li a:active{
+    background-color: red;
+}
+li a.active {
+    background-color: #04AA6D;
+    color: white;
+    padding: 5px;}
+
+ li a:hover:not(.active) {
+    background-color: red;
  }
  
  /* main sec */
@@ -137,3 +146,60 @@ footer a{
    font-size: 30px;
     
 }
+/*----- media queries
+--------- */
+/* mobile devices */
+@media only screen and (max-width:688px) {
+  .top-banner{
+   flex-direction: column;
+  }
+  .half-width{
+    width: 100%;
+  }
+  .container{
+    flex-direction: column;
+   
+  }
+  .side-nav{
+    margin-left: 50px;
+    margin-bottom: 30px;
+    
+  }
+  #blogs{
+    grid-template-columns: repeat(1,1fr);
+  }
+ .mobile-view{
+    display: block;
+    margin-top: 20px;
+   
+ }
+    
+}
+/* tablet view */
+@media only screen and (min-width:688px) and (max-width:992px) {
+   #blogs{
+    grid-template-columns: repeat(2,1fr);
+   }
+    .view{
+        visibility: visible;
+        margin-left: 250px;
+        margin-bottom: 30px;
+    }
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
