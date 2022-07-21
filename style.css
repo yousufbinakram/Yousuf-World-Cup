@@ -44,51 +44,43 @@ main{
   }
  /*--------- header end
  -------- */
-  .side-nav{
-    height: 300px;
-    width: 300px;
-    background-color: black;
-    padding-top: 40px;
-    ;
-
- } 
- 
- .button{
-    border: 1px solid lightcyan;
-    margin: 10px;
-    padding: 10px;
-    background-color: lightcyan;
- }
- ul>li>a{
-    text-decoration: none;
-    color: black;
-    
- }
- ul>li{
-    margin-right: 20px;
-   
- }
-
-li a{
-   display: block;
+ .nav{
+    /*
+     height: 300px;
+    width: 300px; */
+   /* background-color: black; */
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-li a:active{
+.button{
+    margin-top: 10px;
+    padding-top: 20px;
+    
+    border: 2px solid lightcyan;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+}
+
+ a:active{
     background-color: red;
 }
-li a.active {
+ a.active {
     background-color: #04AA6D;
     color: white;
     padding: 5px;}
 
- li a:hover:not(.active) {
+  a:hover:not(.active) {
     background-color: red;
  }
  
  /* main sec */
-.container{
+/* .container{
     display: flex;
     
-}
+} */
 
 #blogs{
     margin-left: 40px;
@@ -157,14 +149,19 @@ footer a{
     width: 100%;
   }
   .container{
+    display: flex;
     flex-direction: column;
-   
-  }
-  .side-nav{
-    margin-left: 50px;
-    margin-bottom: 30px;
     
-  }
+}
+
+ .nav{
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 40px;
+ }
   #blogs{
     grid-template-columns: repeat(1,1fr);
   }
@@ -180,11 +177,35 @@ footer a{
    #blogs{
     grid-template-columns: repeat(2,1fr);
    }
+ .nav{
+    display: flex;
+    flex-direction: row;
+ }
+
+   
     .view{
         visibility: visible;
         margin-left: 250px;
         margin-bottom: 30px;
     }
+}
+@media screen and (min-width:992px) {
+    .nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 300px;
+    width: 300px; 
+    }
+
+.container{
+    display: flex;
+    
+}
+
+    
 }
 
     
